@@ -20,7 +20,7 @@ void cStateCtrl::Init()
 
 bool cStateCtrl::StateAdd(int Index, cState* pState)
 {
-	if (m_pStates[Index] = NULL)
+	if (m_pStates[Index] == NULL)
 	{
 		m_pStates[Index] = pState;
 		return true;
@@ -48,7 +48,7 @@ bool cStateCtrl::StateRelease(int Index)
 bool cStateCtrl::StateChange(int Index)
 {
 	cState* pState = m_pStates[Index];
-	if ( pState != NULL)
+	if (pState != NULL)
 	{
 		if (m_pCurState != NULL)
 		{
